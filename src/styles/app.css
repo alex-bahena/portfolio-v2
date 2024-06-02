@@ -63,7 +63,7 @@ a {
 
 h1 {
   font-weight: 800;
-  font-size: 1.18rem;
+  font-size: 1.4rem;
 }
 
 h2 {
@@ -73,7 +73,7 @@ h2 {
 
 h3 {
   font-weight: 500;
-  font-size: 0.87rem;
+  font-size: 1.2rem;
 }
 
 small {
@@ -81,5 +81,11 @@ small {
 }
 
 p {
+  font-size: 1rem;
   color: var(--color-dark-variant);
+}
+
+ul {
+  list-style-type: none;
+  color: var(--color-dark);
 }
