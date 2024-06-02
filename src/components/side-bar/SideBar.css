@@ -1,11 +1,3 @@
-.container {
-  display: grid;
-  width: 96%;
-  margin: 0 auto;
-  gap: 1.8rem;
-  grid-template-columns: 12rem auto 23rem;
-}
-
 .container-collapsed {
   display: grid;
   width: 96%;
@@ -23,7 +15,6 @@ aside .toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1.4rem;
 }
 
 aside .toggle .logo {
