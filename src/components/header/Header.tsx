@@ -1,11 +1,13 @@
+// Header.jsx
+
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import profile from "../../assets/profilephoto.jpeg";
+
 const Header = (): JSX.Element => {
   return (
     <>
-      {" "}
       <main role="main">
         <div className="header-main-content">
           <h1>About me</h1>
@@ -13,7 +15,7 @@ const Header = (): JSX.Element => {
             <p>
               I'm a{" "}
               <span className="highlight-text">Mechatronics Engineer</span> with
-              a pation for coding. With{" "}
+              a passion for coding. With{" "}
               <span className="highlight-text">over 5 years of experience</span>{" "}
               in Mechatronics Engineering, I've transitioned my focus towards
               coding.{" "}
@@ -25,33 +27,29 @@ const Header = (): JSX.Element => {
               embarked on a journey fueled by curiosity and a penchant for
               experimentation with different coding concepts.
             </p>
-            <a className="download-btn">
+            <div className="download-btn">
               {" "}
               <p>
                 Resume&nbsp;
                 <span className="material-symbols-sharp">download</span>
               </p>
-            </a>
+            </div>
           </section>
         </div>
       </main>
       <header>
         <div className="header-info">
           <span>
-            {" "}
             <img src={profile} alt="profile" />
           </span>
           <h2 className="">Alex Bahena</h2>
-
           <div className="header-education">
             <p>
-              {/* <span className="material-symbols-sharp">school</span>&nbsp; */}
               <i>Fullstack Web Developer</i>
             </p>
           </div>
           <div className="header-location">
             <p>
-              {" "}
               <span className="material-symbols-sharp">location_on</span>
               &nbsp;Greater Toronto Area
             </p>
