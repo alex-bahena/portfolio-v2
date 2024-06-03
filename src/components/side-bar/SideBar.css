@@ -60,6 +60,7 @@ aside .sidebar {
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
   border-radius: 15px;
+  border: 2px solid var(--color-light);
   height: 50vh;
   position: relative;
   top: 1.5rem;

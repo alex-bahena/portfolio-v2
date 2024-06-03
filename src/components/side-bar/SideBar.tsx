@@ -25,6 +25,10 @@ const SideBar = (): JSX.Element => {
         {/* Side bar  Section*/}
         {isMenuOpen ? (
           <div className="sidebar">
+            <a href="#" onClick={toggleMenu}>
+              <span className="material-symbols-sharp">home</span>
+              <h3>Home</h3>
+            </a>
             <a href="#" onClick={toggleMenu} className="active">
               <span className="material-symbols-sharp">terminal</span>
               <h3>Projects</h3>
@@ -40,6 +44,9 @@ const SideBar = (): JSX.Element => {
           </div>
         ) : (
           <div className="sidebar">
+            <a href="#">
+              <span className="material-symbols-sharp">home</span>
+            </a>
             <a href="#" className="collapsed-sidebar">
               <span className="material-symbols-sharp">terminal</span>
             </a>
