@@ -1,9 +1,16 @@
-main,
-header {
+.header-container {
   margin-top: 1.4rem;
   display: grid;
   gap: 1.6rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: 20rem 1fr 1fr;
+}
+
+.header-container main {
+  grid-column-start: 2;
+}
+.header-container header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 main .header-main-content section {
@@ -11,8 +18,10 @@ main .header-main-content section {
   background-color: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
+  border: 2px solid var(--color-light);
   margin-top: 1rem;
   box-shadow: var(--box-shadow);
+  max-width: 35vw;
   height: 42vh;
 }
 
@@ -47,6 +56,7 @@ header .header-info {
   background-color: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
+  border: 2px solid var(--color-light);
   margin-top: 1rem;
   box-shadow: var(--box-shadow);
   transition: all 0.3s ease;
