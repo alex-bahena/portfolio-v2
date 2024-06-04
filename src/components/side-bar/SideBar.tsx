@@ -1,8 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./SideBar.css";
 
 const SideBar = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sidebar = document.querySelector("aside");
+      if (sidebar) {
+        if (window.scrollY > 0) {
+          sidebar.classList.add("sticky");
+        } else {
+          sidebar.classList.remove("sticky");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -44,7 +64,7 @@ const SideBar = (): JSX.Element => {
           </div>
         ) : (
           <div className="sidebar">
-            <a href="#">
+            <a href="#" className="collapsed-sidebar">
               <span className="material-symbols-sharp">home</span>
             </a>
             <a href="#" className="collapsed-sidebar">

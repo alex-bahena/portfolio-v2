@@ -6,7 +6,7 @@
 }
 
 .header-container main {
-  grid-column-start: 2;
+  grid-column-start: 1;
 }
 .header-container header {
   display: grid;
@@ -54,14 +54,13 @@ main .header-main-about-me .download-btn > p:hover {
 header .header-info {
   text-align: center;
   background-color: var(--color-white);
+  position: relative;
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
   border: 2px solid var(--color-light);
   margin-top: 1rem;
   box-shadow: var(--box-shadow);
-  transition: all 0.3s ease;
   height: 45vh;
-  position: relative;
 }
 
 header .header-info h1 {
@@ -105,4 +104,73 @@ header .header-social ul {
 header .header-social ul > li {
   display: inline-block;
   width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  main .header-main-content section {
+    max-width: 96vw;
+    height: auto;
+  }
+
+  main .header-main-content h2 {
+    text-align: center;
+  }
+
+  main .header-main-content section p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  main .header-main-content section,
+  header .header-info {
+    border: 1px solid var(--color-light);
+  }
+
+  main .header-main-content section,
+  header .header-info {
+    height: auto;
+  }
+
+  main .header-main-about-me .download-btn > p {
+    cursor: pointer;
+    justify-content: center;
+    float: none;
+    display: flex;
+    position: inherit;
+    margin-top: 0.9rem;
+    width: 100%;
+  }
+
+  .header-container header {
+    grid-row-start: 1;
+    grid-template-columns: 1fr;
+  }
+
+  header .header-info img {
+    margin-left: 0;
+    width: 9rem;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  header .header-info .header-location {
+    margin-top: 0;
+  }
+  header .header-info h2 {
+    font-size: 1rem;
+  }
+
+  header .header-info p {
+    font-size: 0.7rem;
+  }
+  header .header-info ul {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
 }
