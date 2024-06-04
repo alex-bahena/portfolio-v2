@@ -1,13 +1,6 @@
-.container-collapsed {
-  display: grid;
-  width: 96%;
-  margin: 0 auto;
-  gap: 1.8rem;
-  grid-template-columns: 5rem auto 23rem;
-}
-
 aside {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 100vh;
 }
 
@@ -83,7 +76,7 @@ aside .sidebar a {
 }
 
 aside .sidebar a.collapsed-sidebar {
-  margin-left: 1.5rem;
+  margin-left: calc(1.5rem);
 }
 
 aside .sidebar a span {
@@ -106,7 +99,7 @@ aside .sidebar a.active {
 
 aside .sidebar a.active::before {
   content: "";
-  width: 6px;
+  width: 3px;
   height: 18px;
   background-color: var(--color-primary);
 }
@@ -122,4 +115,38 @@ aside .sidebar a:hover {
 
 aside .sidebar a:hover span {
   margin-left: 0.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+  }
+  aside .sidebar {
+    border: 1px solid var(--color-light);
+  }
+
+  aside .sidebar a {
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  aside .sidebar a span {
+    font-size: 1rem;
+  }
+
+  aside .sidebar a.active {
+    padding-right: 1rem;
+  }
+
+  aside h3 {
+    font-size: 0.8rem;
+  }
 }
