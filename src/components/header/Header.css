@@ -159,18 +159,22 @@ header .header-social ul > li {
     border-radius: 50%;
     overflow: hidden;
   }
-  header .header-info .header-location {
+  header .header-location {
     margin-top: 0;
   }
   header .header-info h2 {
     font-size: 1rem;
   }
+  header .header-education p {
+    font-size: 0.8rem;
+  }
 
-  header .header-info p {
+  header .header-location p {
     font-size: 0.7rem;
+    margin-bottom: 2rem;
   }
   header .header-info ul {
     font-size: 1.3rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
