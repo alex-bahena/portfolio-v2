@@ -44,6 +44,24 @@ const SideBar = (): JSX.Element => {
         </div>{" "}
         {/* Side bar  Section*/}
         {isMenuOpen ? (
+          // collapsed sidebar start
+          <div className="sidebar">
+            <a href="#" className="collapsed-sidebar">
+              <span className="material-symbols-sharp">home</span>
+            </a>
+            <a href="#" className="collapsed-sidebar">
+              <span className="material-symbols-sharp">terminal</span>
+            </a>
+            <a href="#" className="collapsed-sidebar active">
+              <span className="material-symbols-sharp">service_toolbox</span>
+            </a>
+            <a href="#" className="collapsed-sidebar">
+              <span className="material-symbols-sharp">contact_page</span>
+            </a>
+          </div>
+        ) : (
+          // collapsed sidebar End
+
           <div className="sidebar">
             <a href="#" onClick={toggleMenu}>
               <span className="material-symbols-sharp">home</span>
@@ -60,21 +78,6 @@ const SideBar = (): JSX.Element => {
             <a href="#" onClick={toggleMenu}>
               <span className="material-symbols-sharp">contact_page</span>
               <h3>Contact</h3>
-            </a>
-          </div>
-        ) : (
-          <div className="sidebar">
-            <a href="#" className="collapsed-sidebar">
-              <span className="material-symbols-sharp">home</span>
-            </a>
-            <a href="#" className="collapsed-sidebar">
-              <span className="material-symbols-sharp">terminal</span>
-            </a>
-            <a href="#" className="collapsed-sidebar active">
-              <span className="material-symbols-sharp">service_toolbox</span>
-            </a>
-            <a href="#" className="collapsed-sidebar">
-              <span className="material-symbols-sharp">contact_page</span>
             </a>
           </div>
         )}
