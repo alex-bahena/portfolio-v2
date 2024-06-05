@@ -63,9 +63,6 @@ header .header-info {
   height: 45vh;
 }
 
-header .header-info h1 {
-}
-
 header .header-info img {
   margin-left: 1rem;
   width: 15rem;
@@ -82,9 +79,6 @@ header .header-info .header-location p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-header .header-info .header-education {
 }
 
 header .header-social {
